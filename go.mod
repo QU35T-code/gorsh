@@ -9,24 +9,23 @@ require (
 	github.com/abiosoft/readline v0.0.0-20180607040430-155bce2042db
 	github.com/audibleblink/holeysocks v1.0.0
 	github.com/briandowns/spinner v1.19.0 // indirect
-	github.com/c-bata/go-prompt v0.2.6
 	github.com/chzyer/logex v1.1.10 // indirect
 	github.com/chzyer/test v0.0.0-20180213035817-a1ea475d72b1 // indirect
-	github.com/fatih/color v1.7.0 // indirect
+	github.com/desertbit/grumble v1.1.3 // indirect
 	github.com/fatih/structs v1.1.0
 	github.com/flynn-archive/go-shlex v0.0.0-20150515145356-3f9db97f8568 // indirect
 	github.com/go-ole/go-ole v1.2.4 // indirect
 	github.com/jessevdk/go-flags v1.4.0
 	github.com/konsorten/go-windows-terminal-sequences v1.0.2 // indirect
+	github.com/mattn/go-runewidth v0.0.9 // indirect
 	github.com/mattn/go-tty v0.0.3
 	github.com/onsi/ginkgo v1.8.0 // indirect
 	github.com/onsi/gomega v1.5.0 // indirect
+	github.com/pkg/term v1.2.0-beta.2 // indirect
 	github.com/shirou/gopsutil v2.18.12+incompatible
 	github.com/shirou/w32 v0.0.0-20160930032740-bb4de0191aa4 // indirect
 	github.com/sirupsen/logrus v1.4.1
-	github.com/stretchr/testify v1.3.0 // indirect
 	github.com/valyala/gozstd v1.2.1
-	golang.org/x/crypto v0.0.0-20190513172903-22d7a77e9e5f // indirect
 	golang.org/x/net v0.0.0-20190514140710-3ec191127204 // indirect
 	golang.org/x/text v0.3.2
 	gopkg.in/yaml.v2 v2.2.2 // indirect
