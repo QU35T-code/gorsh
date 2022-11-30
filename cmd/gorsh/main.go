@@ -21,13 +21,13 @@ var (
 )
 
 func main() {
-	dev := flag.Bool("dev", false, "Run the shell locally")
+	// dev := flag.Bool("dev", false, "Run the shell locally")
 	override := flag.String("connect", "", "Override compile-time-injected connectString")
 	flag.Parse()
 
-	if *dev {
-		core.StartShell(os.Stdin)
-	}
+	// if *dev {
+	// 	core.StartShell(os.Stdin)
+	// }
 
 	if connectString != "" && fingerPrint != "" {
 		fprint := strings.Replace(fingerPrint, ":", "", -1)

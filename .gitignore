@@ -1,7 +1,8 @@
 server.*
-certs
 !build/gorsh.c
 build
 id_*
-ssh.json
+internal/sshocks/conf/ssh.json
+certs/*.key
+certs/*.pem
 .vscode
